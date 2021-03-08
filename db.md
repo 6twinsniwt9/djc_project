@@ -13,7 +13,7 @@
   ![image]()
   * spread sheet examples
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
-  ![image](https://user-images.githubusercontent.com/77525358/110262220-58987180-7ff6-11eb-8942-96a7683b2b14.png)
+  ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110262231-63eb9d00-7ff6-11eb-85b9-580c015d9d59.png)
 * 새로 알게 된 SQL문
 * 자주 쓰이는 SQL문 정리
