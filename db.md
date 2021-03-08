@@ -10,6 +10,8 @@
  ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Blank%20diagram.png)
 * Schema
   * spread sheet
+  ![image]()
+  * spread sheet examples
   ![image](https://user-images.githubusercontent.com/77525358/110262209-4b7b8280-7ff6-11eb-8715-c1390ac1d2b5.png)
   ![image](https://user-images.githubusercontent.com/77525358/110262220-58987180-7ff6-11eb-8942-96a7683b2b14.png)
   ![image](https://user-images.githubusercontent.com/77525358/110262231-63eb9d00-7ff6-11eb-85b9-580c015d9d59.png)
