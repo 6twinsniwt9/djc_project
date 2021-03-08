@@ -9,6 +9,8 @@
 * ER diagram
  ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Blank%20diagram.png)
 * Schema
+  *spread sheet
+  ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Schema%20sheet.pdf)
 * 새로 알게 된 SQL문
 * 자주 쓰이는 SQL문 정리
   * 컬럼 관련
