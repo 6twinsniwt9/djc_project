@@ -15,7 +15,7 @@
 ## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
 * mongoDB는 mysql처럼 자동으로 데이터 번호를 순서대로 달아주는 기능(auto_increment)이 없다. 따라서 글번호와 같이 데이터를 특정할 수 있는 지표가 필요하다면 다른 DB에 저장을하거나 새로운 collection을 만들어야 한다.  
   
-* NoSQL DB와의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다. [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
+* NoSQL DB와의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 ## ER diagram
  ![image](https://user-images.githubusercontent.com/77525358/110354439-7f4cbb80-807b-11eb-9b27-82df4c392b01.png)
@@ -48,7 +48,8 @@
     1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
     꼭 유의해야 한다. 
     위와 반대로 M:N 관계 타입에서는 관계 인스턴스에 참여하는 엔티티들의 조합에 의해서 결정되는 일부 애트리뷰들이 있어 반드시 관계 애트리뷰트로 명시되어야 한다.  
- 
+   
+   
  * 참고문헌
       -[How to convert an ER diagram to the Relational Data Model](https://www.youtube.com/watch?v=CZTkgMoqVss)
       
@@ -114,6 +115,8 @@ delimiter ;
 ```
 -before update 대신 after update 를 썼더니 오류가 발생했다.  
 -if문 안에 OR 연산자를 사용해 ELSEIF문을 IF문 안에서 구현할려고 했는데 오류가 발생했다.  
+
+  *참고문헌-
 [Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)
 
 * LIMIT  
