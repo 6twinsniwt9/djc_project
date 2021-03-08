@@ -9,12 +9,12 @@
 * ER diagram
  ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Blank%20diagram.png)
 * Schema
-  *spread sheet
+  * spread sheet
   ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Schema%20sheet.pdf)
 * 새로 알게 된 SQL문
 * 자주 쓰이는 SQL문 정리
   * 컬럼 관련
-    * 1)컬럼명 바꾸기
-    * 2)
+    * 1) 컬럼명 바꾸기
+    * 2) 컬럼 순서 바
 
   * 데이터 관련
