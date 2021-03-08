@@ -48,15 +48,15 @@
     1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
     꼭 유의해야 한다. 
     위와 반대로 M:N 관계 타입에서는 관계 인스턴스에 참여하는 엔티티들의 조합에 의해서 결정되는 일부 애트리뷰들이 있어 반드시 관계 애트리뷰트로 명시되어야 한다.  
-         
-  * 참고문헌
+ 
+ * 참고문헌
       -[How to convert an ER diagram to the Relational Data Model](https://www.youtube.com/watch?v=CZTkgMoqVss)
       
 * Schema diagram (spread sheet 사용)
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
-  **:heavy_check_mark: FOREIGN KEY!!!(데이터 무결성 보장) :heavy_check_mark:**  
+  **:heavy_check_mark: ##FOREIGN KEY!!!(데이터 무결성 보장)## :heavy_check_mark:**  
   외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
   1. FK의 애트리뷰트는 R2의 기본키 PK의 애트리뷰트와 동일한 도메인을 가진다.
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
@@ -76,8 +76,28 @@ select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 whe
 
 ```
 * IF/ ELIF ... END IF  
+```
+IF expression THEN
+   statements;
+ELSEIF elseif-expression THEN
+   elseif-statements;
+...
+ELSE
+   else-statements;
+END IF;
+```
+END ELSEIF 나 END ELSE 문을 쓰지 않아도 된다. END문은 END IF로 한 번만 써주면 된다.
+[참고](https://blog.duveen.me/16)
 
-:pushpin: 특정 컬럼만 수정되었을 때 특정 컬럼 변경(TRIGGER+IF문)  
+* delimiter
+```
+delimiter //
+delimiter ;
+```
+쿼리문을 실행시키는 ;(세미콜론)을 delimiter 선언 후 문자(ex. //)로 바꿔 procedure를 수행한다. procedure에서 ;(세미콜론)은 문장 종결 여부 정도의 역할만 수행하고 //는 위 쿼리문을 문장 단위로 분석해 실행시키는 역할을 수행한다.  
+다시 ;(세미콜론)으로 바꿔줄려면 delimiter ;문을 이용하면 된다. 뛰어쓰기를 꼭 주의하도록 하자.
+
+:pushpin: **특정 컬럼만 수정되었을 때 특정 컬럼 변경(TRIGGER+IF문)**  
 ex) title 이나 content 컬럼 수정 시에만 updated 컬럼을 현재 시간으로 수정해주는 SQL 문  
 ```
 delimiter //
@@ -90,10 +110,12 @@ begin
       set NEW.updated=current_timestamp;
    end if;
 end //
-
+delimiter ;
 ```
 -before update 대신 after update 를 썼더니 오류가 발생했다.  
 -if문 안에 OR 연산자를 사용해 ELSEIF문을 IF문 안에서 구현할려고 했는데 오류가 발생했다.  
+[Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)
+
 * LIMIT  
 
 * CHARSET 변경 (latin->utf8: 한글 쓰기 위함)
