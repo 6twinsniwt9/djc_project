@@ -1,20 +1,20 @@
 # Database
 
-* MySQL 선택한 이유  
+## MySQL 선택한 이유  
   -MySQL은 오랫동안 전세계적으로 가장 널리 사용되고 있는 오픈 소스 데이터베이스이다. 무료로 사용가능하면서도 처리되는 속도 또한 상당히 빠르고 용이하며, 대용량의 데이터를 처리할 수 있는 장점과 보안에도 뛰어난 특성을 지닌다.   
   표준 데이터베이스 언어 SQL(Structured Query Language)을 사용해 유연하며 사용하기 쉬운 특징이 있다. 다중 사용자, 다중 thread를 지원하며C,C++,JAVA,PHP,Python 스크립트 등을 위한 인터페이스(API)를 제공한다. 유닉스니 리눅스, Windows 운영체제 등에서 사용가능하다. 다양한 용도로 사용(범용성)이 가능하며 데이터의 일관성을 보장한다.
 
-* MySQL의 특징  
+## MySQL의 특징  
   -데이터 간의 관계성을 기반으로 어떤 데이터가 테이블에 들어가고 어떤 데이터가 들어가지 않을지 정의해주는 필드가 필요하다. 각 데이터는 필드에 맞춰 테이블의 레코드로 저장된다.  
   데이터들을 여러 개의 테이블에 나누어서, 데이터들의 중복을 피할 수 있다. 이러한 특징 덕분에 하나의 테이블에서 하나의 데이터를 관리하게 되고 다른 테이블에서 부정확한 데이터를 다룰 위험이 없어진다.
   
   -수직적 확장 (단순히 데이터베이스 서버의 성능 향상) vs 수평적 확장 (더 많은 서버가 추가되고 데이터베이스가 전체적으로 분산, 하나의 데이터베이스에 여러 호스트에서 작동)  
   데이터가 저장되는 방식 때문에 SQL데이터 베이스는 일반적으로 수직적 확장만을 지원한다.
   
-* 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
+## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
   * 둘의 차이점은...
   
-* ER diagram
+## ER diagram
  ![image](https://user-images.githubusercontent.com/77525358/110354439-7f4cbb80-807b-11eb-9b27-82df4c392b01.png)
     * **마름모**: 관계 타입
     * **동그라미**: 애트리뷰트 (엔티티를 기술하는 속성)  
@@ -37,7 +37,7 @@
          
     * 참고문헌
  -[Designing an ER Diagram](https://www.youtube.com/watch?v=8JFaaD1vzSY&t=376s)
-* Schema
+## Schema
   * schema
   ![image](https://user-images.githubusercontent.com/77525358/110330419-122c2c80-8061-11eb-8791-5c7829a582f3.png)
      **:heavy_check_mark: schema에서 카디날리티가 가장 핵심!!!:heavy_check_mark:**
@@ -49,14 +49,14 @@
     * 참고문헌
       -[How to convert an ER diagram to the Relational Data Model](https://www.youtube.com/watch?v=CZTkgMoqVss)
       
-  * Schema diagram (spread sheet 사용)
+  ## Schema diagram (spread sheet 사용)
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
     * 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
-* 새로 알게 된 SQL문
-* 자주 쓰이는 SQL문 정리
+## 유용하다고 생각한 SQL문
+## 자주 쓰이는 SQL문 정리
   * 컬럼 관련
     * 1) 컬럼명 바꾸기
     * 2) 컬럼 순서 바
