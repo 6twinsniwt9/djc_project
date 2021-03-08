@@ -8,11 +8,11 @@
 * 데이터 간의 관계성을 기반으로 어떤 데이터가 테이블에 들어가고 어떤 데이터가 들어가지 않을지 정의해주는 필드가 필요하다. 각 데이터는 필드에 맞춰 테이블의 레코드로 저장된다.  
   데이터들을 여러 개의 테이블에 나누어서, 데이터들의 중복을 피할 수 있다. 이러한 특징 덕분에 하나의 테이블에서 하나의 데이터를 관리하게 되고 다른 테이블에서 부정확한 데이터를 다룰 위험이 없어진다.
   
-* 수직적 확장 (단순히 데이터베이스 서버의 성능 향상) vs 수평적 확장 (더 많은 서버가 추가되고 데이터베이스가 전체적으로 분산, 하나의 데이터베이스에 여러 호스트에서 작동)  
-  데이터가 저장되는 방식 때문에 SQL데이터 베이스는 일반적으로 수직적 확장만을 지원한다.
+* *수직적 확장 (단순히 데이터베이스 서버의 성능 향상) vs 수평적 확장 (더 많은 서버가 추가되고 데이터베이스가 전체적으로 분산, 하나의 데이터베이스에 여러 호스트에서 작동)*  
+  데이터가 저장되는 방식 때문에 SQL데이터 베이스는 일반적으로 수직적 확장만을 지원한다. 수평적 확장은 NoSQL 데이터베이스에서만 가능하다.
   
 ## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
-* 둘의 차이점은...
+* 
   
 ## ER diagram
  ![image](https://user-images.githubusercontent.com/77525358/110354439-7f4cbb80-807b-11eb-9b27-82df4c392b01.png)
@@ -53,12 +53,19 @@
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
+  **:heavy_check_mark: FOREIGN KEY!!!(데이터 무결성 보장) :heavy_check_mark:**  
+  
+  
     * 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
+* ROWNUM
+* TRIGGER
+* IF/ ELIF ... END IF
+* 
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
-  * 1) 컬럼명 바꾸기
-  * 2) 컬럼 순서 바
+  * 컬럼명 바꾸기
+  * 컬럼 순서 바꾸기
 
 * 데이터 관련
