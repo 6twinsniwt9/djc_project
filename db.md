@@ -12,7 +12,7 @@
   * spread sheet
   ![image]()
   * spread sheet examples
-  ![image](https://user-images.githubusercontent.com/77525358/110262818-2f78e080-7ff8-11eb-8d7e-07d9ed6961d4.png)
+  ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110262220-58987180-7ff6-11eb-8942-96a7683b2b14.png)
   ![image](https://user-images.githubusercontent.com/77525358/110262231-63eb9d00-7ff6-11eb-85b9-580c015d9d59.png)
 * 새로 알게 된 SQL문
