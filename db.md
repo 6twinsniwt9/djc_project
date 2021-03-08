@@ -60,7 +60,7 @@
   외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
   1. FK의 애트리뷰트는 R2의 기본키 PK의 애트리뷰트와 동일한 도메인을 가진다.
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
-    
+  
     * 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
@@ -68,14 +68,32 @@
 ```
 select @rownum:=@rownum+1 as no,테이블명.컬럼명,테이블명.컬럼명,...,테이블명.컬럼명 from 테이블명 where 테이블명.컬럼명=1;
 ```
-select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 where절에 '(@rownum:=0)=0 and'를 추가해주면 된다.  
-밑줄 친 부분은 (@rownum을 계속 초기화할 때 사용하면 된다) [참고](https://needjarvis.tistory.com/259)  
+select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 where절에 '(@rownum:=0)=0 and'를 추가해주면 된다. [참고](https://needjarvis.tistory.com/259)  
 ![image](https://user-images.githubusercontent.com/77525358/110389589-1596d680-80a8-11eb-9761-2d14afe33457.png)
 
 * TRIGGER  
+```
 
+```
 * IF/ ELIF ... END IF  
 
+:pushpin: 특정 컬럼만 수정되었을 때 특정 컬럼 변경(TRIGGER+IF문)  
+ex) title 이나 content 컬럼 수정 시에만 updated 컬럼을 현재 시간으로 수정해주는 SQL 문  
+```
+delimiter //
+create trigger_upd_free_board before update on free_board
+for each row
+begin
+   if !(NEW.content<=>OLD.content)
+      set NEW.updated=current_timestamp;
+   elseif !(NEW.title<=>OLD.title)
+      set NEW.updated=current_timestamp;
+   end if;
+end //
+
+```
+-before update 대신 after update 를 썼더니 오류가 발생했다.  
+-if문 안에 OR 연산자를 사용해 ELSEIF문을 IF문 안에서 구현할려고 했는데 오류가 발생했다.  
 * LIMIT  
 
 * CHARSET 변경 (latin->utf8: 한글 쓰기 위함)
@@ -83,6 +101,19 @@ select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 whe
 alter table 테이블명 convert to character set utf8;
 ```
 * 이벤트 스케쥴러
+```
+CREATE EVENT IF NOT EXISTS [이벤트 이름]
+    ON SCHEDULE
+        [수행, 반복 할 시간]
+    ON COMPLETION NOT PRESERVE
+    ENABLE
+    COMMENT [코멘트]
+    DO 
+    [수행할 명령]
+END
+```
+특정 이벤트를 자동으로 정기적으로 수행시켜준다.
+
 
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
