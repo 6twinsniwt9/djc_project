@@ -7,7 +7,7 @@
   * 둘의 차이점은...
   
 * ER diagram
- ![image](https://github.com/6twinsniwt9/djc_project/blob/main/Blank%20diagram.png)
+ ![image](https://user-images.githubusercontent.com/77525358/110299708-5c99b300-8039-11eb-9852-cf92816eb057.png)
 * Schema
   * spread sheet
   ![image]()
