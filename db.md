@@ -7,7 +7,7 @@
   * 둘의 차이점은...
   
 * ER diagram
- ![image](https://user-images.githubusercontent.com/77525358/110299708-5c99b300-8039-11eb-9852-cf92816eb057.png)
+ ![image](https://user-images.githubusercontent.com/77525358/110334320-fbd49f80-8065-11eb-8d75-183472d88a08.png)
 * Schema
   * schema
   ![image](https://user-images.githubusercontent.com/77525358/110330419-122c2c80-8061-11eb-8791-5c7829a582f3.png)
