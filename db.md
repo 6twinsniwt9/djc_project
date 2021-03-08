@@ -15,7 +15,8 @@
 ## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
 * mongoDB는 mysql처럼 자동으로 데이터 번호를 순서대로 달아주는 기능(auto_increment)이 없다. 따라서 글번호와 같이 데이터를 특정할 수 있는 지표가 필요하다면 다른 DB에 저장을하거나 새로운 collection을 만들어야 한다.  
   
-* NoSQL DB와의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
+* NoSQL DB와의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  
+* [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 ## ER diagram
  ![image](https://user-images.githubusercontent.com/77525358/110354439-7f4cbb80-807b-11eb-9b27-82df4c392b01.png)
@@ -62,7 +63,7 @@
   1. FK의 애트리뷰트는 R2의 기본키 PK의 애트리뷰트와 동일한 도메인을 가진다.
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
   
-    * 참고문헌
+  * 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
 * ROWNUM  
@@ -74,8 +75,12 @@ select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 whe
 
 * TRIGGER  
 ```
+CREATE TRIGGER [트리거이름] [BEFORE|AFTER] [INSERT|UPDATE|DELETE] ON [테이블이름] FOR EACH ROW [실행문]
 
 ```
+트리거란 특정 DB 테이블을 감시하고 있다가 변화가 감지되면 별도로 정해놓은 프로그램을 실행 시키는 기술
+[참고](https://blog.work6.kr/154)
+
 * IF/ ELIF ... END IF  
 ```
 IF expression THEN
