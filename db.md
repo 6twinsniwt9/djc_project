@@ -64,7 +64,7 @@
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
     
     
-  * 참고문헌
+* 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
 * ROWNUM  
@@ -122,15 +122,23 @@ delimiter ;
 -before update 대신 after update 를 썼더니 오류가 발생했다.  
 -if문 안에 OR 연산자를 사용해 ELSEIF문을 IF문 안에서 구현할려고 했는데 오류가 발생했다.  
 
-  *참고문헌-
+  * 참고문헌-
 [Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)
 
 * LIMIT  
+```
+limit 10,10
+```
+limit을 값을 하나만 넣으면 출력할 개수가 지정되고 값을 2개 넣으면 첫번째 값은 offset, 두번째 값은 출력할 개수가 지정이 된다.  
+위의 예시는 11번부터 20번까지의 id값을 갖는 데이터를 페이징 처리해준다.
+
+출처: https://needjarvis.tistory.com/259 [자비스가 필요해]
 
 * CHARSET 변경 (latin->utf8: 한글 쓰기 위함)
 ```
 alter table 테이블명 convert to character set utf8;
 ```
+
 * 이벤트 스케쥴러
 ```
 CREATE EVENT IF NOT EXISTS [이벤트 이름]
