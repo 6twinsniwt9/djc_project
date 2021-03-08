@@ -64,10 +64,25 @@
     * 참고문헌
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
-* ROWNUM
-* TRIGGER
-* IF/ ELIF ... END IF
-* LIMIT
+* ROWNUM  
+```
+select @rownum:=@rownum+1 as no,테이블명.컬럼명,테이블명.컬럼명,...,테이블명.컬럼명 from 테이블명 where ~~~(@rownum:=0)=0 and~~~ 테이블명.컬럼명=1;
+```
+밑줄 친 부분은 (@rownum을 계속 초기화할 때 사용하면 된다) [참고](https://needjarvis.tistory.com/259)  
+![image](https://user-images.githubusercontent.com/77525358/110389589-1596d680-80a8-11eb-9761-2d14afe33457.png)
+
+* TRIGGER  
+
+* IF/ ELIF ... END IF  
+
+* LIMIT  
+
+* CHARSET 변경 (latin->utf8: 한글 쓰기 위함)
+```
+alter table 테이블명 convert to character set utf8;
+```
+* 이벤트 스케쥴러
+
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
   * 컬럼명 바꾸기
