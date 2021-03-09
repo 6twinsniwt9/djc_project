@@ -111,9 +111,9 @@ delimiter //
 create trigger_upd_free_board before update on free_board
 for each row
 begin
-   if !(NEW.content<=>OLD.content)
+   if !(NEW.content<=>OLD.content) then
       set NEW.updated=current_timestamp;
-   elseif !(NEW.title<=>OLD.title)
+   elseif !(NEW.title<=>OLD.title) then
       set NEW.updated=current_timestamp;
    end if;
 end //
