@@ -68,14 +68,14 @@
  -[Converting ER Diagrams to Schemas](https://www.youtube.com/watch?v=xQRRf5fOAt8&t=557s)
 ## 유용하다고 생각한 SQL문
 * ROWNUM  
-```
+```SQL
 select @rownum:=@rownum+1 as no,테이블명.컬럼명,테이블명.컬럼명,...,테이블명.컬럼명 from 테이블명 where 테이블명.컬럼명=1;
 ```
 select문을 실행할 때마다 rownum을 0으로 초기화하고 싶다면 where절에 '(@rownum:=0)=0 and'를 추가해주면 된다. [참고](https://needjarvis.tistory.com/259)  
 ![image](https://user-images.githubusercontent.com/77525358/110389589-1596d680-80a8-11eb-9761-2d14afe33457.png)
 
 * TRIGGER  
-```
+```SQL
 CREATE TRIGGER [트리거이름] [BEFORE|AFTER] [INSERT|UPDATE|DELETE] ON [테이블이름] FOR EACH ROW [실행문]
 
 ```
