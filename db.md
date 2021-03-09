@@ -15,7 +15,7 @@
 ## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
 * mongoDB는 mysql처럼 자동으로 데이터 번호를 순서대로 달아주는 기능(auto_increment)이 없다. 따라서 글번호와 같이 데이터를 특정할 수 있는 지표가 필요하다면 다른 DB에 저장을하거나 새로운 collection을 만들어야 한다.  
   
-* NoSQL DB와의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  
+* NoSQL DB한 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  
 [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 ## ER diagram
@@ -168,7 +168,7 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
 -**ON DELETE CASCADE**: 부모테이블에서 PRIMARY 값이 삭제될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 삭제되면서 참조 무결성을 유지한다.
 [참고](https://wrkbr.tistory.com/691)
 
-* JOIN
+* INNER JOIN VS LEFT JOIN
 
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
