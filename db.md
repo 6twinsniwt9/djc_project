@@ -83,7 +83,7 @@ CREATE TRIGGER [트리거이름] [BEFORE|AFTER] [INSERT|UPDATE|DELETE] ON [테�
 [참고](https://blog.work6.kr/154)
 
 * IF/ ELSEIF/ ELSE ... END IF  
-```
+```SQL
 IF expression THEN
    statements;
 ELSEIF elseif-expression THEN
@@ -97,7 +97,7 @@ END ELSEIF 나 END ELSE 문을 쓰지 않아도 된다. END문은 END IF로 한 
 [참고](https://blog.duveen.me/16)
 
 * delimiter
-```
+```SQL
 delimiter //
 delimiter ;
 ```
@@ -106,7 +106,7 @@ delimiter ;
 
 :pushpin: **특정 컬럼만 수정되었을 때 특정 컬럼 변경(TRIGGER+IF문)**  
 ex) title 이나 content 컬럼 수정 시에만 updated 컬럼을 현재 시간으로 수정해주는 SQL 문  
-```
+```SQL
 delimiter //
 create trigger_upd_free_board before update on free_board
 for each row
@@ -126,7 +126,7 @@ delimiter ;
 [Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)
 
 * LIMIT  
-```
+```SQL
 limit 10,10
 ```
 limit을 값을 하나만 넣으면 출력할 개수가 지정되고 값을 2개 넣으면 첫번째 값은 offset, 두번째 값은 출력할 개수가 지정이 된다.  
@@ -134,12 +134,12 @@ limit을 값을 하나만 넣으면 출력할 개수가 지정되고 값을 2개
 
 
 * CHARSET 변경 (latin->utf8: 한글 쓰기 위함)
-```
+```SQL
 alter table 테이블명 convert to character set utf8;
 ```
 
 * 이벤트 스케쥴러
-```
+```SQL
 CREATE EVENT IF NOT EXISTS [이벤트 이름]
     ON SCHEDULE
         [수행, 반복 할 시간]
