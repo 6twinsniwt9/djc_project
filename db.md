@@ -124,8 +124,8 @@ delimiter ;
 
   * 참고문헌-
 [Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)  
-[on update CURRENT_TIMESTAMP” for only one column in mysql](https://stackoverflow.com/questions/37856582/on-update-current-timestamp-for-only-one-column-in-mysql)
-(바로 위 링크는 이전 버전이라 그런지 틀린 문법이긴 하지만 방향성을 잡을 수 있었다.)
+-[on update CURRENT_TIMESTAMP” for only one column in mysql](https://stackoverflow.com/questions/37856582/on-update-current-timestamp-for-only-one-column-in-mysql)
+( 링크는 이전 버전이라 그런지 틀린 문법이긴 하지만 방향성을 잡을 수 있었다.)
 
 * LIMIT  
 ```SQL
