@@ -84,13 +84,13 @@ CREATE TRIGGER [트리거이름] [BEFORE|AFTER] [INSERT|UPDATE|DELETE] ON [테�
 
 * IF/ ELSEIF/ ELSE ... END IF  
 ```SQL
-IF expression THEN
-   statements;
-ELSEIF elseif-expression THEN
-   elseif-statements;
+IF [expression] THEN
+   [statements];
+ELSEIF [elseif-expression] THEN
+   [elseif-statements];
 ...
 ELSE
-   else-statements;
+   [else-statements];
 END IF;
 ```
 END ELSEIF 나 END ELSE 문을 쓰지 않아도 된다. END문은 END IF로 한 번만 써주면 된다.
@@ -124,6 +124,8 @@ delimiter ;
 
   * 참고문헌-
 [Fire a trigger after the update of specific columns in MySQL](https://stackoverflow.com/questions/19152974/fire-a-trigger-after-the-update-of-specific-columns-in-mysql)
+[on update CURRENT_TIMESTAMP” for only one column in mysql](https://stackoverflow.com/questions/37856582/on-update-current-timestamp-for-only-one-column-in-mysql)
+(바로 위 링크는 이전 버전이라 그런지 틀린 문법이긴 하지만 방향성을 잡을 수 있었다.)
 
 * LIMIT  
 ```SQL
@@ -152,6 +154,21 @@ END
 ```
 특정 이벤트를 자동으로 정기적으로 수행시켜준다.
 
+* Foreign Key 제약조건
+```SQL
+ALTER TABLE 테이블이름
+
+ADD [CONSTRAINT 제약조건이름]
+
+FOREIGN KEY (필드이름)
+
+REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
+```
+-ON UPDATE CASCADE: 부모테이블에서 PRIMARY 값이 수정될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 변경된 상위테이블의 수정된 값을 가지면서 참조 무결성을 유지한다.  
+-ON DELETE CASCADE: 부모테이블에서 PRIMARY 값이 삭제될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 삭제되면서 참조 무결성을 유지한다.
+[참고](https://wrkbr.tistory.com/691)
+
+* JOIN
 
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
