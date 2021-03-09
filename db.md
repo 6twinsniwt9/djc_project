@@ -164,8 +164,8 @@ FOREIGN KEY (필드이름)
 
 REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
 ```
--ON UPDATE CASCADE: 부모테이블에서 PRIMARY 값이 수정될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 변경된 상위테이블의 수정된 값을 가지면서 참조 무결성을 유지한다.  
--ON DELETE CASCADE: 부모테이블에서 PRIMARY 값이 삭제될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 삭제되면서 참조 무결성을 유지한다.
+-**ON UPDATE CASCADE**: 부모테이블에서 PRIMARY 값이 수정될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 변경된 상위테이블의 수정된 값을 가지면서 참조 무결성을 유지한다.  
+-**ON DELETE CASCADE**: 부모테이블에서 PRIMARY 값이 삭제될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 삭제되면서 참조 무결성을 유지한다.
 [참고](https://wrkbr.tistory.com/691)
 
 * JOIN
