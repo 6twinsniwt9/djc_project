@@ -1,10 +1,10 @@
 # &nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px"> AGLOO&nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px">
 **:bulb: 아주인들을 위한 동아리, 소모임 SNS APP**
-> 같은 동아리원끼리 소통할 수 있는 커뮤니티 성격을 가진 서비스와 동아리 임원으로서 동아리원들을 관리하고, 더 나아가 홍보나 내가 필요한 타 동아리의 정보까지 얻을 수 있는 통합적인 플랫폼
+> 동아리원끼리는 서로 등록해놓은 시간표를 확인하고 겹치는 공강 시간은 언제인지 계산해주는 기능과
+> 동아리 임원은 동아리에 대한 정보를 기입하고 활동내역들을 올릴 수 있고 이를 바탕으로 외부에서도 공개된 정보를 보고 동아리 홍보 또한 가능한 서비스를
+> 가진 통합적인 플랫폼
 ## ❄️Period
 2021.01~2021.03
-## ❄️Team
-
 ## ❄️Member
 * 김기윤 (팀장, 기획, BACK-END)  
 [contact](https://github.com/ccrakel)
