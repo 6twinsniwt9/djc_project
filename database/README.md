@@ -46,11 +46,10 @@
 * schema
   ![image](https://user-images.githubusercontent.com/77525358/110330419-122c2c80-8061-11eb-8791-5c7829a582f3.png)
    **:heavy_check_mark: schema에서 카디날리티가 가장 핵심!!!:heavy_check_mark:**  
-   ```
    1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
     꼭 유의해야 한다. 
     위와 반대로 M:N 관계 타입에서는 관계 인스턴스에 참여하는 엔티티들의 조합에 의해서 결정되는 일부 애트리뷰들이 있어 반드시 관계 애트리뷰트로 명시되어야 한다.  
-   ```
+      
      
  * 참고문헌
       -[How to convert an ER diagram to the Relational Data Model](https://www.youtube.com/watch?v=CZTkgMoqVss)
@@ -60,11 +59,9 @@
   ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
   **:heavy_check_mark: ##FOREIGN KEY!!!(데이터 무결성 보장)## :heavy_check_mark:**  
-  ```
-  외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
+  외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1   의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
   1. FK의 애트리뷰트는 R2의 기본키 PK의 애트리뷰트와 동일한 도메인을 가진다.
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
-  ```
     
     
   * 참고문헌
