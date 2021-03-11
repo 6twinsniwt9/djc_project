@@ -1,10 +1,11 @@
 # &nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px"> AGLOO&nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px">
-**-아주인들을 위한 동아리, 소모임 SNS APP**
-## Period
+**:bulb: 아주인들을 위한 동아리, 소모임 SNS APP**
+> 동아리 관련 앱...
+## ❄️Period
 2021.01~2021.03
-## Team
+## ❄️Team
 
-## Member
+## ❄️Member
 * 김기윤 (팀장, 기획, BACK-END)  
 [contact](https://github.com/ccrakel)
 * 김나현 (DATABASE)  
@@ -14,17 +15,17 @@
 * 이상훈 (APP FRONT-END)  
 [contact](https://github.com/FriedEggChicken)
 
-## Technology used
+## ❄️Technology used
   * React-native
   * Node.js
   * MySQL  
-## Directory Description
+## ❄️Directory Description
   * /front-end
   * /back-end
 
-## ERD design
+## ❄️ERD design
 -수정 중~
-## Developmnet result
+## ❄️Developmnet result
   * **Sign in & Sign up**  
   
   * **Set personal timetable**  
@@ -43,8 +44,8 @@
   
   * **sign out**
     
-## How to process 
+## ❄️How to process 
 
-## I felt that...
+## ❄️I felt that...
 
-## CONTACT
+## 🌈CONTACT
