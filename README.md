@@ -1,6 +1,6 @@
 # &nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px"> AGLOO&nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px">
 **:bulb: 아주인들을 위한 동아리, 소모임 SNS APP**
-> 동아리 관련 앱...
+> 같은 동아리원끼리 소통할 수 있는 커뮤니티 성격을 가진 서비스와 동아리 임원으로서 동아리원들을 관리하고, 더 나아가 홍보나 내가 필요한 타 동아리의 정보까지 얻을 수 있는 통합적인 플랫폼
 ## ❄️Period
 2021.01~2021.03
 ## ❄️Team
