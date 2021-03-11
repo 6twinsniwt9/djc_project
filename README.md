@@ -6,6 +6,9 @@
 ## ❄️Period
 2021.01~2021.03
 ## ❄️Member
+**전소미 팀**
+> '전'자공학과+'소'프트웨어학과+'미'디어학과
+> 아주대학교 전자공학과, 소프트웨어학과, 미디어학과에 재학 중인 학우분들 모여 
 * 김기윤 (팀장, 기획, BACK-END)  
 [contact](https://github.com/ccrakel)
 * 김나현 (DATABASE)  
@@ -16,12 +19,18 @@
 [contact](https://github.com/FriedEggChicken)
 
 ## ❄️Technology used
-  * React-native
-  * Node.js
+  * React-native  
+  
+  * Node.js  
+  
   * MySQL  
+  
 ## ❄️Directory Description
   * /front-end
-  * /back-end
+  
+  * /back-end  
+  
+  * /database
 
 ## ❄️ERD design
 -수정 중~
@@ -29,7 +38,7 @@
   * **Sign in & Sign up**  
   <img src="https://user-images.githubusercontent.com/77534983/110496386-c482f300-8138-11eb-97a7-48c1c0875698.gif" width="300" height="500" />  
   
-  * **Show the latest news information and clubs you have joined**
+  * **Show the latest news clubs you have joined and information of the club**
   <img src="https://user-images.githubusercontent.com/77534983/110771603-07121000-829e-11eb-99a6-128c7f0d0034.gif" width="300" height="500" />  
   
   * **Set personal timetable**  
@@ -52,4 +61,4 @@
 
 ## ❄️I felt that...
 
-## 🌈CONTACT
+## 🌈Contact
