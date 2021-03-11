@@ -29,7 +29,7 @@
   * **Sign in & Sign up**  
   <img src="https://user-images.githubusercontent.com/77534983/110496386-c482f300-8138-11eb-97a7-48c1c0875698.gif" width="300" height="600" />  
   
-  * **Show all clubs you have joined**
+  * **Show the latest news and clubs you have joined**
   <img src="https://user-images.githubusercontent.com/77534983/110771603-07121000-829e-11eb-99a6-128c7f0d0034.gif" width="300" height="600" />  
   
   * **Set personal timetable**  
