@@ -5,13 +5,13 @@
 
 ## 팀원:
 * 김기윤 (팀장, 기획, BACK-END)  
-[visit github](https://github.com/ccrakel)
+[visit :octocat:](https://github.com/ccrakel)
 * 김나현 (DATABASE)  
-[visit github](https://github.com/6twinsniwt9)
+[visit :octocat:](https://github.com/6twinsniwt9)
 * 류지호 (APP FRONT-END)  
-[visit github](https://github.com/ryuzho)
+[visit :octocat:](https://github.com/ryuzho)
 * 이상훈 (APP FRONT-END)  
-[visit github](https://github.com/FriedEggChicken)
+[visit :octocat:](https://github.com/FriedEggChicken)
 
 ## Technology used
   * React-native
@@ -26,11 +26,12 @@
 ## Developmnet result
   * **Sign in & Sign up**
   * **Set personal timetable**
+  * **Show all sorted clubs in the field of interest
   * **Apply for clubs**
   * **Show vacant time between chosen members in the club**
   * **Add any contents in the notice board only by executives**
-  * **Add any contents in the boards by club memebers**
-  * **sign out
+  * **Add any contents in the other boards by club memebers**
+  * **sign out**
 ## How to process 
 
 ## I felt that...
