@@ -15,7 +15,7 @@
 ## 프로젝트를 하면서 느낀 RDBMS와 DBMS의 차이점
 * mongoDB는 mysql처럼 자동으로 데이터 번호를 순서대로 달아주는 기능(auto_increment)이 없다. 따라서 글번호와 같이 데이터를 특정할 수 있는 지표가 필요하다면 다른 DB에 저장을하거나 새로운 collection을 만들어야 한다.  
   
-* NoSQL DB한 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  
+* NoSQL DB의 가장 큰 특징은 MySQL과는 다르게 배열을 저장할 수 있다는 점이다. SQL DB라면 게시글과 댓글은 테이블을 따로 빼서 만드는 수 밖에 없지만, NoSQL DB는 댓글을 그냥 게시글 데이터에 넣어버릴 수 있다. 물론 상황에 따라 collection을 따로 만들어도 되긴 하다.  
 [참고](http://blog.naver.com/PostView.nhn?blogId=azure0777&logNo=220764784580&categoryNo=18&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 ## ER diagram
@@ -46,11 +46,12 @@
 * schema
   ![image](https://user-images.githubusercontent.com/77525358/110330419-122c2c80-8061-11eb-8791-5c7829a582f3.png)
    **:heavy_check_mark: schema에서 카디날리티가 가장 핵심!!!:heavy_check_mark:**  
-    1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
+   ```
+   1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
     꼭 유의해야 한다. 
     위와 반대로 M:N 관계 타입에서는 관계 인스턴스에 참여하는 엔티티들의 조합에 의해서 결정되는 일부 애트리뷰들이 있어 반드시 관계 애트리뷰트로 명시되어야 한다.  
-   
-   
+   ```
+     
  * 참고문헌
       -[How to convert an ER diagram to the Relational Data Model](https://www.youtube.com/watch?v=CZTkgMoqVss)
       
@@ -59,9 +60,11 @@
   ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
   **:heavy_check_mark: ##FOREIGN KEY!!!(데이터 무결성 보장)## :heavy_check_mark:**  
+  ```
   외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
   1. FK의 애트리뷰트는 R2의 기본키 PK의 애트리뷰트와 동일한 도메인을 가진다.
   2. 현재 상태 r1(R1)의 한 투플 t1 내의 FK값은 현재 상태 r2 (R2)의 어떤 투플 t2 내의 PK값과 일치하거나 널 값을 가져야 한다.  
+  ```
     
     
   * 참고문헌
@@ -194,7 +197,7 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
   ALTER TABLE [테이블명] ADD COLUMN [추가할컬럼명] [컬럼타입] DEFAULT [디폴트값] [컬럼명;
   ```
   -두번째 SQL문으로 컬럼 추가 뿐만이 아니라 컬럼의 위치도 동시에 변경해 줄 수 있다.  
-  (맨 위로 컬럼을 옮기고 싶다면 FIRST를 넣어주면 된다.)
+  (맨 위로 컬럼을 옮기고 싶다면 FIRST를 넣어주면 된다.)  
   * 컬럼 삭제하기
   ```SQL
   ALTER TABLE [테이블명] DROP COLUMN [컬럼명];
@@ -212,5 +215,40 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
   ```SQL
   DELETE FROM [테이블명] WHERE [조건];
   ```
+* 기타
+  * 테이블 구조 복사하기
+  ```SQL
+  CREATE TABLE IF NOT EXISTS [복사할 테이블명] LIKE [원본테이블명];
+  ```
+  -주의해야 할 점은 기본키(Primary Key)와 인덱스(Index), Auto Increment는 제외하고 복사한다!  
+  (말 그대로 테이블의 구조 정도만 복사한다.)  
+  * 테이블 데이터 복사하기
+  ```SQL
+  INSERT INTO [복사할 테이블명] SELECT * FROM [원본테이블명];
+  ```
+  * 테이블 데이터 부분 복사
+  ```SQL
+  INSERT INTO [복사할 테이블명] ([컬럼 1], [컬럼 2],...) SELECT [컬럼 1], [컬럼 2],... FROM [원본 테이블명];
+  ```
+  * 테이블 생성 쿼리 가져오기
+  ```SQL
+  SHOW CREATE TABLE [테이블명];
+  ```
+  * 특정 컬럼을 NOT NULL로 바꾸기
+  ``SQL
+  ALTER TABLE [테이블명] MODIFY [컬럼명] [컬럼타입] NOT NULL;
+  ```
+  * AUTO_INCREMENT 값 초기화하기
+  ```SQL
+  ALTER TABLE [테이블명] AUTO_INCREMENT=[시작할려는 순서-1];
   
-  
+  ```
+  * AUTO_INCREMENT가 적용된 컬럼값 재정렬하기
+  ```SQL
+  SET @COUNT=0;
+  UPDATE [테이블명] SET [컬럼명]=@COUNT:=@COUNT+1;
+  ```
+  * 변경 사항 취소하기 (트랜젝션으로 인한 하나의 묶음 처리가 시작되기 이전의 상태로 되돌린다.:COMMIT)
+  ```SQL
+  ROLLBACK;
+  ```
