@@ -234,7 +234,7 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
   SHOW CREATE TABLE [테이블명];
   ```
   * 특정 컬럼을 NOT NULL로 바꾸기
-  ``SQL
+  ```SQL
   ALTER TABLE [테이블명] MODIFY [컬럼명] [컬럼타입] NOT NULL;
   ```
   * AUTO_INCREMENT 값 초기화하기
