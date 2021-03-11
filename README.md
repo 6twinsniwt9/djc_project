@@ -26,11 +26,11 @@
 ## Developmnet result
   * **Sign in & Sign up**
   * **Set personal timetable**
-  * **Show all sorted clubs in the field of interest
+  * **Show all sorted clubs in the field of interest**
   * **Apply for clubs**
   * **Show vacant time between chosen members in the club**
   * **Add any contents in the notice board only by executives**
-  * **Add any contents in the other boards by club memebers**
+  * **Add any contents in the boards by club memebers**
   * **sign out**
 ## How to process 
 
