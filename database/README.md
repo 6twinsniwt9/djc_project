@@ -173,6 +173,44 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
   * 컬럼명 바꾸기
+  ```SQL
+  ALTER TABLE [테이블병] CHANGE [기존컬럼명] [변경할 컬럼명] [컬럼타입];
+  ```
   * 컬럼 순서 바꾸기
-
+  ```SQL
+  ALTER TABLE [테이블명] MODIFY [순서변경할컬럼명] [컬럼타입] AFTER [앞에오는컬럼명];
+  ```
+  * 컬럼 디폴트값 바꾸기
+  ```SQL
+  ALTER TABLE [테이블명] ALTER COLUMN [변경할컬럼명] SET DEFAULT [디폴트값];
+  ```
+  * 컬럼 타입 바꾸기
+  ```SQL
+  ALTER TABLE [테이블명] MODIFY [컬럼명] [변경할컬럼타입];
+  ```
+  * 컬럼 추가하기
+  ```SQL
+  ALTER TABLE [테이블명] ADD [추가할컬럼명] [컬럼타입] DEFAULT [디폴트값];
+  ALTER TABLE [테이블명] ADD COLUMN [추가할컬럼명] [컬럼타입] DEFAULT [디폴트값] [컬럼명;
+  ```
+  -두번째 SQL문으로 컬럼 추가 뿐만이 아니라 컬럼의 위치도 동시에 변경해 줄 수 있다.  
+  (맨 위로 컬럼을 옮기고 싶다면 FIRST를 넣어주면 된다.)
+  * 컬럼 삭제하기
+  ```SQL
+  ALTER TABLE [테이블명] DROP COLUMN [컬럼명];
+  ```
 * 데이터 관련
+  * 데이터 추가하기
+  ```SQL
+  INSERT INTO [테이블명] [컬럼1, 컬럼2,...] VALUES (값1, 값2,...);
+  ```
+  * 데이터 수정하기
+  ```SQL
+  UPDATE [테이블명] SET [컬럼1]=[수정값1], [컬럼2]=[수정값2],... WHERE [조건];
+  ```
+  * 데이터 삭제하기
+  ```SQL
+  DELETE FROM [테이블명] WHERE [조건];
+  ```
+  
+  
