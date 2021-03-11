@@ -153,7 +153,9 @@ CREATE EVENT IF NOT EXISTS [이벤트 이름]
 END
 ```
 특정 이벤트를 자동으로 정기적으로 수행시켜준다.
-
+😰STARTS CURRENT_TIMESTAMP로 지정해주면 STARTS 시점에 [수행할 명령]이 바로 실행된다...자칫하다가 데이터를 다 날려버릴 수 있다. 주의하자!  
+->AT CURRENT_TIMESTAMP+INTERVAL 5 YEARS로 하면 위 문제점을 방지할 수 있을 것이다.  
+[참고](https://soccerda.tistory.com/101)
 * Foreign Key 제약조건
 ```SQL
 ALTER TABLE 테이블이름
