@@ -1,4 +1,5 @@
-# &nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px"> AGLOO&nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px">- 아주인들을 위한 동아리, 소모임 SNS APP
+# &nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px"> AGLOO&nbsp;<img src="https://github.com/anythingcodes/slack-emoji-for-techies/blob/gh-pages/emoji/igloo.gif" width="40px">
+## -아주인들을 위한 동아리, 소모임 SNS APP
 ## 제작 기간
 2021.01~2021.03
 
