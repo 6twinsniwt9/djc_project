@@ -163,7 +163,7 @@ END
 mysqldump -u[user] -p[pass] [복사 DBname] > [결과 DBname].sql
 ```  
 
- * 데이터베이스 복사
+   * 데이터베이스 복사
 ```
 mysql -u[user] -p[pass] [DBname] < [DBname].sql
 ```
@@ -191,7 +191,6 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
  [참고](https://jaenjoy.tistory.com/7)
          
  * 서브 쿼리 vs JOIN
-   -
  
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
