@@ -56,7 +56,7 @@
       
 * Schema diagram (spread sheet 사용)
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
-  ![image](https://user-images.githubusercontent.com/77525358/110263106-fee57680-7ff8-11eb-9640-4b20e6cc30fb.PNG)
+  ![image](https://user-images.githubusercontent.com/77525358/111023131-93e1d880-841a-11eb-81d9-ac4438699d16.png)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
   **:heavy_check_mark: ##FOREIGN KEY!!!(데이터 무결성 보장)## :heavy_check_mark:**  
   외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1   의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
