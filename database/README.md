@@ -56,7 +56,7 @@
       
 * Schema diagram (spread sheet 사용)
   ![image](https://user-images.githubusercontent.com/77525358/110263144-17ee2780-7ff9-11eb-9379-db48519316f0.PNG)
-  ![image]((https://user-images.githubusercontent.com/77525358/111023255-53368f00-841b-11eb-8124-56d4c7fd5e35.png)
+  ![image](https://user-images.githubusercontent.com/77525358/111023255-53368f00-841b-11eb-8124-56d4c7fd5e35.png)
   ![image](https://user-images.githubusercontent.com/77525358/110263124-0b69cf00-7ff9-11eb-8ef3-6de22abc4f3f.PNG)
   **:heavy_check_mark: ##FOREIGN KEY!!!(데이터 무결성 보장)## :heavy_check_mark:**  
   외래키가 되기 위해서는 두 릴레이션 스키마 R1과 R2 사이의 참조 무결성 제약 조건이 만족되어야 한다. 릴레이션 스키마 R1   의 어떤 애트리뷰트들의 집합 FK가 다음의 규칙을 만족하면 FK는 릴레이션 R2를 참조하는 R1의 외래키이다.
@@ -170,8 +170,15 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
 -**ON DELETE CASCADE**: 부모테이블에서 PRIMARY 값이 삭제될 경우 옵션 CASCADE로 정의되면 하위테이블의 REFERENCE 값은 삭제되면서 참조 무결성을 유지한다.
 [참고](https://wrkbr.tistory.com/691)
 
-* INNER JOIN VS LEFT JOIN
-
+* INNER JOIN vs OUTER JOIN(대표: LEFT JOIN)  
+- INNER JOIN : Table A와 Table B의 교집합을 조회  
+- OUTER JOIN : Table A와 Table B의 합집합을 조회  
+         -경우에 따라 다르겠지만 LEFT JOIN보다 INNER JOIN을 사용할 경우 추가적으로 JOIN 또는 연산해야 하는 target data 수가 확연히 줄기 때문에 습관적으로 LEFT JOIN보다는 query의 성능을 위해서 INNER JOIN을 사용하는 것이 좋다. 
+ [참고문헌](https://jaenjoy.tistory.com/7)
+         
+ * 서브 쿼리 vs JOIN
+ -
+ 
 ## 자주 쓰이는 SQL문 정리
 * 컬럼 관련
   * 컬럼명 바꾸기
