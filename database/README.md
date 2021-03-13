@@ -159,14 +159,13 @@ END
 
 * ☑️ 데이터베이스 백업 및 복사
   * 데이베이스 백업
-```
-mysqldump -u[user] -p[pass] [복사 DBname] > [결과 DBname].sql
-```  
-
-   * 데이터베이스 복사
-```
-mysql -u[user] -p[pass] [DBname] < [DBname].sql
-```
+  ```
+  mysqldump -u[user] -p[pass] [복사 DBname] > [결과 DBname].sql
+  ```
+  * 데이터베이스 복사
+  ```
+  mysql -u[user] -p[pass] [DBname] < [DBname].sql
+  ```
 
 * Foreign Key 제약조건
 ```SQL
@@ -183,11 +182,11 @@ REFERENCES 테이블이름 (필드이름) ON UPDATE CASCADE ON DELETE CASCADE
 [참고](https://wrkbr.tistory.com/691)
 
 * INNER JOIN vs OUTER JOIN(대표: LEFT JOIN)  
-**-INNER JOIN** : Table A와 Table B의 교집합을 조회  
-**-OUTER JOIN** : Table A와 Table B의 합집합을 조회  
+*-INNER JOIN* : Table A와 Table B의 교집합을 조회  
+*-OUTER JOIN* : Table A와 Table B의 합집합을 조회  
 
-      -경우에 따라 다르겠지만 LEFT JOIN보다 INNER JOIN을 사용할 경우 추가적으로 JOIN 또는 연산해야 하는 target data 수가 확연히 줄기 때문에
-      습관적으로 LEFT JOIN보다는 query의 성능을 위해서 INNER JOIN을 사용하는 것이 좋다. 
+    -경우에 따라 다르겠지만 LEFT JOIN보다 INNER JOIN을 사용할 경우 추가적으로 JOIN 또는 연산해야 하는 target data 수가 확연히 줄기 
+    때문에 습관적으로 LEFT JOIN보다는 query의 성능을 위해서 INNER JOIN을 사용하는 것이 좋다. 
  [참고](https://jaenjoy.tistory.com/7)
          
  * 서브 쿼리 vs JOIN
