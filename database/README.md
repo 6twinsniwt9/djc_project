@@ -44,7 +44,7 @@
  -[Designing an ER Diagram](https://www.youtube.com/watch?v=8JFaaD1vzSY&t=376s)
 ## Schema
 * schema
-  ![image](https://user-images.githubusercontent.com/77525358/110330419-122c2c80-8061-11eb-8791-5c7829a582f3.png)
+  ![image](https://user-images.githubusercontent.com/77525358/111060522-d5d55200-84e0-11eb-99bc-eacee3e06e32.png)
    **:heavy_check_mark: schema에서 카디날리티가 가장 핵심!!!:heavy_check_mark:**  
    1:1 혹은 1:N 관계 타입은 참여하고 있는 엔티티 타입들 중의 하나로 통합될 수 있다. 다만 1:N 관계 타입에서는 관계 애트리뷰트가 관계의 N측 엔티티 타입으로만 이동할 수 있다는 점을  
     꼭 유의해야 한다. 
